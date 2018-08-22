@@ -19,6 +19,11 @@ server.use(express.json());
 //purpose of this is to enable cross domain requests
 // Add headers
 server.use(function (req, res, next) {
+    // var allowedOrigins = ['http://ktarver.techlaunch.io:8000', 'http://142.93.198.70:8000'];
+    // var origin = req.headers.origin;
+    // if (allowedOrigins.indexOf(origin) > -1) {
+    //   res.setHeader('Access-Control-Allow-Origin', origin);
+    // }
 
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', ['http://142.93.198.70:8000','http://ktarver.techlaunch.io:8000']);
