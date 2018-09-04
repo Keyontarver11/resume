@@ -50,7 +50,7 @@ server.get("/", function(req, res) {
 
 server.post("/", function(req, res) {
   console.log(req.body);
-  let emailBody = fs.readFileSync("./assets/index.html");
+  let emailBody = fs.readFileSync("./assets/form.html");
   let mailOptions = {
     from: req.body.from,
     to: req.body.destination,
