@@ -45,12 +45,12 @@ server.use(function (req, res, next) {
 server.use("/", express.static(path.join(__dirname, "assets")));
 ///////////
 server.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "./assets/form.html"));
+  res.sendFile(path.join(__dirname, "./form.html"));
 });
 
 server.post("/", function(req, res) {
   console.log(req.body);
-  let emailBody = fs.readFileSync("./assets/form.html");
+  let emailBody = fs.readFileSync("./assets/resume.html");
   let mailOptions = {
     from: req.body.from,
     to: req.body.destination,
